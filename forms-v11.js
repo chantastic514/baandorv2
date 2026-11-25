@@ -1,0 +1,1 @@
+document.querySelectorAll('form[data-v11-preview]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const s=f.querySelector('[role=status]');s.textContent=document.documentElement.lang.startsWith('fr')?'Maquette : formulaire validé, aucun envoi effectué.':'Preview: form validated, no information sent.';}));
