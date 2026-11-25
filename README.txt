@@ -1,0 +1,1 @@
+Baan d’Or V16 staging. Upload all files and directories at repository root, including .nojekyll. Do not publish to production before final QA. Existing page URLs retained for GitHub preview. Booking links open new tabs; first-visit offer calls the spa. Google Analytics runs only on baandor.com after consent. See private developer handoff for production instructions.
