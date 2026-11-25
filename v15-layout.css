@@ -1,0 +1,14 @@
+/* V15: compact premium cards and visible desktop navigation */
+main .tile{padding:0;min-width:0;overflow:hidden;border-radius:20px;display:flex;flex-direction:column;box-shadow:0 4px 18px #38241909}
+main .tile>img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 55%;flex:none;border-radius:0}
+main .tile>div{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
+main .tile h3{font-size:clamp(1.35rem,2vw,1.85rem);line-height:1.15;margin:0}
+main .tile p{font-size:.95rem;line-height:1.5;margin:0 0 4px}
+main .tile>div>a:first-of-type{margin-top:auto}
+main .tile .btn{margin-bottom:0;min-height:44px;padding:10px 12px;font-size:14px;white-space:normal;text-align:center}
+main .grid:has(>.tile){grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px}
+@media(min-width:900px){header nav{display:flex;flex-wrap:nowrap;gap:clamp(8px,1vw,20px);padding:12px clamp(12px,2vw,32px)}header nav .logo{margin-right:0!important;flex:0 0 auto}header nav .logo img{width:clamp(72px,7vw,110px);height:72px;object-fit:contain}header nav .nav-menu{display:flex!important;flex:1 1 auto;flex-direction:row;align-items:center;justify-content:center;order:0;gap:clamp(8px,1.15vw,24px);padding:0;min-width:0}header nav .nav-menu .navlink,header nav .treatment-menu summary{font-size:clamp(11px,1.05vw,15px);white-space:nowrap;padding:8px 0}header nav .mobile-menu{display:none!important}header nav .btn{flex:none;padding:10px 16px;margin:0;white-space:nowrap;font-size:13px}header nav .treatment-dropdown{position:absolute;width:min(340px,90vw);box-shadow:0 8px 24px #38241922}header nav .lang-switch{flex:none}}
+@media(max-width:1050px){main .grid:has(>.tile){grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px}}
+@media(max-width:899px){header nav .mobile-menu{display:block}header nav .nav-menu{display:none}header nav .nav-menu.open{display:flex}}
+@media(max-width:600px){main .grid:has(>.tile){gap:12px}main .tile{border-radius:15px}main .tile>img{aspect-ratio:4/3}main .tile>div{padding:12px;gap:8px}main .tile h3{font-size:1.25rem}main .tile p{font-size:.82rem;line-height:1.45}main .tile .btn{font-size:12px;padding:9px 5px;min-height:44px}}
+@media(max-width:350px){main .grid:has(>.tile){grid-template-columns:1fr!important}}
