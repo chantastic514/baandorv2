@@ -1,1 +1,5 @@
 Baan d’Or V16 staging. Upload all files and directories at repository root, including .nojekyll. Do not publish to production before final QA. Existing page URLs retained for GitHub preview. Booking links open new tabs; first-visit offer calls the spa. Google Analytics runs only on baandor.com after consent. See private developer handoff for production instructions.
+
+V17: compact treatment privileges, Ideal for bullets, bilingual package names, team cleanup, five philosophy icons, side-by-side immersive offers. Keep V16 analytics/SEO.
+
+FINAL V17 — hero art direction: keep Treatments unchanged; Packages = relaxation room (photo-6); Team = therapist at work (photo-11); Corporate = oil massage (photo-3); Products = product display (photo-12); About = intimate lounge (photo-1); Contact = reception lounge (photo-0). Same assets in FR/EN, localized alt text, explicit dimensions, eager/high-priority loading. Verify focal crops at desktop and mobile widths before launch. No performance score is asserted without deployed testing.
