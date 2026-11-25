@@ -28,7 +28,7 @@
   actions.append(accept,reject);box.append(text,actions);document.body.append(box);
   const prefs=button(tr('Préférences de confidentialité','Privacy preferences'),()=>{box.hidden=false;accept.focus()});prefs.className='bd-privacy-link';(document.querySelector('footer')||document.body).append(prefs);
   if(!get())box.hidden=false;
-  document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]');if(!a||!started||get()!=='granted')return;let u;try{u=new URL(a.href)}catch{return}if(u.hostname!=='www.fresha.com'&&u.hostname!=='fresha.com')return;if(a.dataset.therapist)gtag('event','therapist_booking_click',{therapist:a.dataset.therapist,source_page:location.pathname,transport_type:'beacon'});gtag('event',u.pathname.includes('/packages/')?'fresha_package_click':'fresha_booking_click',{destination_path:u.pathname,source_page:location.pathname,transport_type:'beacon'});});
+  document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]');if(e.defaultPrevented||!a||!started||get()!=='granted')return;let u;try{u=new URL(a.href)}catch{return}if(u.hostname!=='www.fresha.com'&&u.hostname!=='fresha.com')return;if(a.dataset.therapist)gtag('event','therapist_booking_click',{therapist:a.dataset.therapist,source_page:location.pathname,transport_type:'beacon'});gtag('event',u.pathname.includes('/packages/')?'fresha_package_click':'fresha_booking_click',{destination_path:u.pathname,source_page:location.pathname,transport_type:'beacon'});});
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
 })();
