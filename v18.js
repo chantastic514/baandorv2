@@ -29,10 +29,6 @@
  document.querySelectorAll('.site-footer .footer-grid > div:first-child a[href^="tel:"]').forEach(a=>{
   const p=a.parentElement;if(!p.querySelector('a[href="mailto:admin@baandor.com"]')){const email=document.createElement('a');email.href='mailto:admin@baandor.com';email.textContent='admin@baandor.com';a.after(document.createElement('br'),email);}
  });
- document.querySelectorAll('.v16-social').forEach(section=>{
-  const h=section.querySelector('h2'),actions=section.querySelector('.v16-social-actions');
-  if(h&&actions){const follow=document.createElement('p');follow.className='v16-social-caption';follow.textContent=fr?'Suivez-nous':'Follow Us';follow.style.margin='0 0 1rem';h.after(follow);const caption=section.querySelector('.v16-social-caption:not(:first-child)');section.querySelectorAll('.v16-social-caption').forEach(p=>{if(p!==follow&&/Entrez dans notre univers|Step inside our world/i.test(p.textContent))p.remove();});}
- });
  if(fr){const date=document.querySelector('#enquiry input[name="date"]');if(date){date.type='text';date.placeholder='aaaa-mm-jj';date.inputMode='numeric';date.pattern='[0-9]{4}-[0-9]{2}-[0-9]{2}';date.maxLength=10;date.autocomplete='off';date.addEventListener('input',()=>{const value=date.value;let valid=!value;if(/^\d{4}-\d{2}-\d{2}$/.test(value)){const parsed=new Date(value+'T00:00:00Z');valid=!Number.isNaN(parsed.valueOf())&&parsed.toISOString().slice(0,10)===value;}date.setCustomValidity(valid?'':'Veuillez saisir une date valide au format aaaa-mm-jj.');});}}
 })();
 
