@@ -25,3 +25,6 @@ main .bd-single-action:active .btn{background:#f1d49c!important;color:#382419!im
 .bd-quick .quick-body .btn{min-height:44px}
 @media(max-width:600px){.bd-quick{width:calc(100% - 16px);max-width:460px;height:auto;max-height:94dvh;margin:auto;border-radius:18px}.bd-quick .quick-image{aspect-ratio:16/7;max-height:145px}.bd-quick .quick-body{gap:8px;padding:16px}.bd-quick .quick-body h3{font-size:1.15rem}.bd-quick .quick-body p,.bd-quick .quick-ideal,.bd-quick .quick-prices{font-size:.88rem}}
 @media(prefers-reduced-motion:reduce){header nav>a.btn,main .bd-single-action{transition:none!important;transform:none!important}}
+
+/* V19: uppercase page titles and homepage carousel titles, FR and EN. */
+main h1, main h1 span, main .hero-frame .hero h2, main .hero-frame .hero h2 span {text-transform:uppercase!important}
